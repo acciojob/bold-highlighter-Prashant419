@@ -1,35 +1,31 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rotating Line</title>
+  <title>Bold Highlighter</title>
   <style>
-    #line {
-      background-color: black;
-      width: 200px;
-      height: 2px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      /* Added transform-origin to center the rotation */
-      transform-origin: center;
+    /* Add any additional styles as needed */
+    a {
+      text-decoration: underline;
+      cursor: pointer;
+      color: blue;
     }
   </style>
 </head>
 <body>
 
-<div id="line"></div>
+  <a href="#" onmouseover="highlight()" onmouseout="returnNormal()">Hover Over Link</a>
 
-<script>
-  const line = document.getElementById('line');
-  let angle = 0;
+  <p>
+    AccioJob is an ed-tech startup run by IIT Delhi alumni that provides a comprehensive state-of-the-art learning platform for Full Stack Web Development.
+    Our industry-relevant curriculum is taught by top tech instructors and mentors, and our students have gone on to work at leading tech companies like Amazon, Salesforce, and Walmart, among others.
+    With job placement opportunities at 300+ top tech partner companies, we have placed 1000+ students in 2022 itself at an average salary of 8.3 LPA.
+  </p>
 
-  setInterval(() => {
-    angle += 2;
-    line.style.transform = `rotate(${angle}deg)`;
-  }, 20);
-</script>
-
+  <!-- Include the script file -->
+  <script src="script.js"></script>
 </body>
 </html>
